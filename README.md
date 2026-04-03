@@ -109,17 +109,30 @@ changelog:
 Every entry follows this status flow:
 
 ```
-Draft → Preview → Approved → Published → Superseded / Deprecated
+Draft → Ready for Review → Preview → Approved → Published → Superseded / Deprecated
 ```
 
-- **Draft** — Aphrodite is building or shaping the entry
-- **Preview** — ready for board review; screenshot/mockup complete
+- **Draft** — Aphrodite is building or shaping the entry; screenshot/mockup in progress
+- **Ready for Review** — Aphrodite submits for review; Hephaestus reviews for technical feasibility; Calliope reviews copy/messaging when relevant
+- **Preview** — all prior reviews complete; ready for board review
 - **Approved** — board signed off; entry goes into the library at next release
 - **Published** — tagged release; available for project consumption
 - **Superseded** — replaced by a newer published version
 - **Deprecated** — should not be chosen for new work
 
-Board approval happens at **Preview → Approved**. Entries do not get published without explicit board sign-off.
+**Review gate sequence**:
+
+```
+Draft
+  → [Hephaestus tech review + Calliope copy review if relevant]
+  → Preview
+  → [Board approval]
+  → Approved
+  → [Aphrodite merges + tags release]
+  → Published
+```
+
+Entries do not reach Preview without passing the Hephaestus/Calliope gate. Entries do not get Published without explicit board sign-off.
 
 ---
 
@@ -146,20 +159,27 @@ Projects pin to a tag. `main` is always draft — not for consumption.
 
 ### 1. Athena selects
 
-Athena reviews the published library for the new project. She picks the closest entry if fit is good. If no entry fits, she opens a new catalog proposal.
+Athena reviews the published library for the new project. She picks the closest entry if fit is good. She confirms fit with Aphrodite and Hephaestus if uncertain.
 
-### 2. Apollo extends
+### 2. Apollo implements
 
-Apollo takes the selected entry and extends it for project context:
+Apollo takes the selected entry as the baseline for implementation:
 
-- Uses the required sections as structural baseline
+- Reads `entry.yaml` and `entry.md` fully before starting
+- Reviews Figma source and screenshots to align with approved visual direction
+- Uses required sections as the structural baseline
 - Customizes within allowed variations
-- Flags any deviation from required sections as a documented exception
-- Feeds reusable improvements back to Aphrodite
+- Flags immediately when project requirements conflict with required sections or exceed allowed variations
+- Documents all deviations as project-specific exceptions in the working issue
 
-### 3. Significant deviations go back through the catalog
+### 3. Deviation handling
 
-If a project needs significant changes beyond allowed variations, Athena evaluates whether it should become a new catalog entry (Draft → Preview → Approved → Published). This is how the library grows over time.
+If a project needs changes beyond allowed variations:
+- Apollo documents the deviation in the issue
+- Athena evaluates whether it warrants a new catalog entry
+- If yes, Aphrodite opens a Draft proposal through the lifecycle
+
+If the same deviation appears across multiple projects, Apollo files it as a catalog improvement proposal with Aphrodite — this is how the library grows over time without every project becoming a one-off.
 
 ---
 

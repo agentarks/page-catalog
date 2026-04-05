@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932">
+  <rect width="430" height="932" fill="#eef3f4"/>
+  <rect x="20" y="20" width="390" height="56" rx="18" fill="#c7d8dc"/>
+  <text x="38" y="55" fill="#1f2c30" font-family="Helvetica, Arial, sans-serif" font-size="18">Dashboard Home mobile draft</text>
+  <rect x="20" y="106" width="390" height="92" rx="22" fill="#ffffff" stroke="#7aa2ad" stroke-width="3"/>
+  <rect x="20" y="228" width="390" height="116" rx="22" fill="#ffffff" stroke="#9ab8bf" stroke-width="3"/>
+  <rect x="20" y="374" width="390" height="150" rx="22" fill="#ffffff" stroke="#9ab8bf" stroke-width="3"/>
+  <rect x="20" y="554" width="390" height="150" rx="22" fill="#ffffff" stroke="#9ab8bf" stroke-width="3"/>
+  <rect x="20" y="734" width="390" height="150" rx="22" fill="#d9e8eb"/>
+</svg>

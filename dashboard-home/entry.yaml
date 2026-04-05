@@ -1,0 +1,42 @@
+id: dashboard-home
+name: Dashboard Home
+version: v0.2.0
+status: draft
+owner: Aphrodite
+approved_by: null
+approved_on: null
+intended_use: >
+  Authenticated product homepages that need to orient returning users quickly,
+  show what matters now, and surface the shortest path to the next meaningful
+  action.
+non_goals:
+  - First-run onboarding sequences or setup wizards
+  - Detailed analytics or reporting views
+  - Settings-heavy or administration-heavy surfaces
+ux_rationale: >
+  Dashboard homes reduce navigation overhead by answering three questions on
+  arrival: what matters now, what changed recently, and what should I do next.
+  The pattern should prioritize those answers instead of becoming a generic
+  module board.
+allowed_variations:
+  - One, two, or three-column card layouts depending on density
+  - Product-specific widget mix and order
+  - Top-bar search and utility actions based on app complexity
+  - Optional help or promotional panel only when it stays secondary to live work
+required_sections:
+  - Global navigation or command bar
+  - Orientation region with status or workspace framing
+  - Priority actions block
+  - Recent activity or recency-based module
+  - Progress, queue, or work-in-flight summary
+screenshots:
+  desktop: screenshots/desktop-draft.svg
+  mobile: screenshots/mobile-draft.svg
+figma_link: pending://add-before-preview
+changelog:
+  - version: v0.2.0
+    date: 2026-04-05
+    changes: Clarified dashboard versus onboarding boundary and strengthened structural expectations; canonical Figma source still missing
+  - version: v0.1.0
+    date: 2026-04-05
+    changes: Initial AGE-206 draft entry installed in standalone repo

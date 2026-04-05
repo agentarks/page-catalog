@@ -1,8 +1,10 @@
 # page-catalog
 
-A git repo of pre-approved page templates consumable by new AgentArks projects.
+A git repo of reusable page archetypes for new AgentArks projects.
 
-**The goal**: when starting a new project, pick an approved page from the library → flesh it out for project context → ship. No surprise direction changes because the board already approved the pattern.
+Published tags are the stable source of truth for downstream consumers. `main` remains draft and integration history until entries clear review and release.
+
+**The goal**: when starting a new project, pick the closest published page from the library, adapt it within the allowed variation surface, and ship without inventing a parallel pattern.
 
 ---
 
@@ -11,10 +13,21 @@ A git repo of pre-approved page templates consumable by new AgentArks projects.
 ```
 page-catalog/
 ├── README.md
+├── .github/
+│   └── PULL_REQUEST_TEMPLATE.md
+├── docs/
+│   ├── company-git-delivery-policy.md
+│   ├── company-review-signoff-matrix.md
+│   └── worktree-and-branch-map.md
+├── Makefile
+├── scripts/
+│   └── validate_catalog.rb
+├── test/
+│   └── validate_catalog_test.rb
 ├── landing-page/
 │   ├── entry.yaml          # structured metadata
 │   ├── entry.md            # human-readable: when to use, when not to, UX rationale
-│   ├── screenshots/        # desktop + mobile, current approved version
+│   ├── screenshots/        # desktop + mobile draft or approved proof
 │   └── figma/              # Figma source link
 ├── dashboard-home/
 │   └── ...
@@ -104,6 +117,25 @@ changelog:
 
 ---
 
+## Validation
+
+Run one command before opening or updating a meaningful PR:
+
+```bash
+make validate
+```
+
+That command runs:
+
+- `ruby test/validate_catalog_test.rb`
+- `ruby scripts/validate_catalog.rb .`
+
+The validator checks every catalog entry for:
+
+- required repo files: `entry.yaml`, `entry.md`, `figma/README.md`, and the screenshot assets declared in `entry.yaml`
+- required metadata fields in `entry.yaml`
+- basic metadata shape plus valid `screenshots.desktop` / `screenshots.mobile` paths that stay inside the entry directory
+
 ## Lifecycle
 
 Every entry follows this status flow:
@@ -124,6 +156,7 @@ Draft → Ready for Review → Preview → Approved → Published → Superseded
 
 ```
 Draft
+  → Ready for Review
   → [Hephaestus tech review + Calliope copy review if relevant]
   → Preview
   → [Board approval]
@@ -151,7 +184,7 @@ page-catalog/v1.1.0  — minor update to landing-page
 page-catalog/v2.0.0  — new archetype; major revision of dashboard-home
 ```
 
-Projects pin to a tag. `main` is always draft — not for consumption.
+Projects pin to a tag. `main` is always draft and should not be treated as a stable dependency surface.
 
 ---
 
@@ -183,6 +216,13 @@ If the same deviation appears across multiple projects, Apollo files it as a cat
 
 ---
 
+## Delivery Workflow
+
+- Repo delivery policy: `docs/company-git-delivery-policy.md`
+- Review routing matrix: `docs/company-review-signoff-matrix.md`
+- Current task mapping and future worktree convention: `docs/worktree-and-branch-map.md`
+- Meaningful PRs should use `.github/PULL_REQUEST_TEMPLATE.md`
+
 ## Roles
 
 | Role | Responsibility |
@@ -203,19 +243,20 @@ If the same deviation appears across multiple projects, Apollo files it as a cat
 2. Fill in `entry.yaml` and `entry.md` at Draft quality
 3. Add screenshots at Draft quality (can be wireframes)
 4. Open a PR with status: `Draft`
-5. When ready for review, move to Preview and notify the board
-6. After board approval, Aphrodite merges and tags a release
+5. Move the entry to Ready for Review and request Hephaestus review plus Calliope review when messaging matters
+6. Advance the review-complete entry to Preview and notify the board
+7. After board approval, Aphrodite merges and tags a release
 
 ---
 
 ## Current Entries
 
-_None yet — this library is being bootstrapped as part of AGE-206._
-
-Planned v1 set:
+Draft library entries installed in this repo:
 - landing-page
 - auth-signin
 - settings-page
 - onboarding-flow
 - dashboard-home
 - marketing-cta
+
+These entries are still `draft` until they clear Ready for Review, Preview, board approval, and a tagged release.

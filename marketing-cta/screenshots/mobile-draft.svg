@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932">
+  <rect width="430" height="932" fill="#f7efe9"/>
+  <rect x="20" y="20" width="390" height="56" rx="18" fill="#e7d3c6"/>
+  <text x="38" y="55" fill="#33251f" font-family="Helvetica, Arial, sans-serif" font-size="18">Marketing / CTA mobile draft</text>
+  <rect x="20" y="112" width="390" height="250" rx="24" fill="#ffffff" stroke="#c39173" stroke-width="3"/>
+  <rect x="46" y="184" width="260" height="16" rx="8" fill="#e2c7b5"/>
+  <rect x="46" y="214" width="220" height="16" rx="8" fill="#e2c7b5"/>
+  <rect x="46" y="256" width="160" height="44" rx="18" fill="#c39173"/>
+  <rect x="20" y="396" width="390" height="150" rx="24" fill="#fdf7f2" stroke="#d1ae99" stroke-width="3"/>
+  <rect x="20" y="578" width="390" height="150" rx="24" fill="#fdf7f2" stroke="#d1ae99" stroke-width="3"/>
+  <rect x="20" y="760" width="390" height="110" rx="24" fill="#ead7cc"/>
+</svg>

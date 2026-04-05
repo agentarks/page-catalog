@@ -1,0 +1,44 @@
+id: landing-page
+name: Landing Page
+version: v0.2.0
+status: draft
+owner: Aphrodite
+approved_by: null
+approved_on: null
+intended_use: >
+  Broad marketing homepages, product-introduction pages, and campaign entry
+  points that need to orient first-time visitors, establish trust, and lead
+  them toward one primary next action.
+non_goals:
+  - Narrow single-offer CTA pages where the user already has context
+  - Pricing or comparison-heavy pages with dense evaluation needs
+  - Authenticated application surfaces or content hubs
+ux_rationale: >
+  Landing pages work when they answer the visitor's questions in order:
+  what this is, why it matters, why it is credible, and what to do next. The
+  pattern protects that sequence so the page does not ask for conversion
+  before it has earned confidence.
+allowed_variations:
+  - Hero media choice: image, illustration, or restrained motion
+  - CTA wording and destination for campaign context
+  - Trust-signal format: logos, stats, testimonials, or a compact mix
+  - Narrative versus product-led emphasis in the explanatory middle sections
+required_sections:
+  - Lightweight top navigation with one dominant CTA
+  - Hero section with headline, framing copy, and primary CTA
+  - Early trust-signal section
+  - Value explanation or differentiation section
+  - Proof or supporting evidence section
+  - Repeated conversion point after the value and proof sections
+  - Footer with legal and navigation basics
+screenshots:
+  desktop: screenshots/desktop-draft.svg
+  mobile: screenshots/mobile-draft.svg
+figma_link: pending://add-before-preview
+changelog:
+  - version: v0.2.0
+    date: 2026-04-05
+    changes: Strengthened reuse boundaries, required structure, and review recommendation; canonical Figma source still missing
+  - version: v0.1.0
+    date: 2026-04-05
+    changes: Initial AGE-206 draft entry installed in standalone repo

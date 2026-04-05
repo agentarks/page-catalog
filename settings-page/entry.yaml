@@ -1,0 +1,40 @@
+id: settings-page
+name: Settings Page
+version: v0.2.0
+status: draft
+owner: Aphrodite
+approved_by: null
+approved_on: null
+intended_use: >
+  Account, workspace, and product-configuration pages where the main job is
+  helping a user locate, understand, and safely change preferences or controls.
+non_goals:
+  - Billing or subscription-management flows
+  - Admin-only management consoles
+  - Specialized security or credential-recovery flows that need separate trust review
+ux_rationale: >
+  Settings pages are about control without fear. The structure should make
+  discovery fast, edit loops safe, and destructive actions visibly separate
+  from routine preference changes.
+allowed_variations:
+  - Sidebar, tabbed, or single-page navigation depending on setting count
+  - Different control density for novice versus expert products
+  - Product-specific section groupings
+required_sections:
+  - Page title and scope framing
+  - Section navigation or grouping mechanism
+  - Clear section header and descriptive copy
+  - Grouped setting controls with helper text or validation as needed
+  - Save, cancel, or reset action area with clear dirty-state behavior
+  - Clearly separated destructive-action zone
+screenshots:
+  desktop: screenshots/desktop-draft.svg
+  mobile: screenshots/mobile-draft.svg
+figma_link: pending://add-before-preview
+changelog:
+  - version: v0.2.0
+    date: 2026-04-05
+    changes: Strengthened safe-edit structure and clarified boundaries with auth and admin flows; canonical Figma source still missing
+  - version: v0.1.0
+    date: 2026-04-05
+    changes: Initial AGE-206 draft entry installed in standalone repo

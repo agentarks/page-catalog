@@ -1,13 +1,14 @@
 id: marketing-cta
 name: Marketing / CTA Page
-version: v0.1.0
+version: v0.2.0
 status: draft
 owner: Aphrodite
 approved_by: null
 approved_on: null
 intended_use: >
   Focused marketing pages whose job is driving one specific conversion or
-  action, narrower in scope than a broad landing page.
+  action for a visitor who already has enough context that the page can stay
+  narrower than a broad landing page.
 non_goals:
   - Broad homepage or brand-introduction pages
   - Blog, editorial, or content-library pages
@@ -26,11 +27,15 @@ required_sections:
   - Supporting proof or visual context
   - Benefit or objection-handling section
   - Trust reinforcement near conversion point
+  - Repeated CTA only after enough proof has been shown
 screenshots:
   desktop: screenshots/desktop-draft.svg
   mobile: screenshots/mobile-draft.svg
 figma_link: pending://add-before-preview
 changelog:
+  - version: v0.2.0
+    date: 2026-04-05
+    changes: Strengthened boundary with landing pages and tightened conversion-focused structure; canonical Figma source still missing
   - version: v0.1.0
     date: 2026-04-05
     changes: Initial AGE-206 draft entry installed in standalone repo

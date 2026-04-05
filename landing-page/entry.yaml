@@ -1,38 +1,44 @@
 id: landing-page
 name: Landing Page
-version: v0.1.0
+version: v0.2.0
 status: draft
 owner: Aphrodite
 approved_by: null
 approved_on: null
 intended_use: >
-  Marketing homepages, campaign pages, and other top-of-funnel pages whose
-  primary job is to communicate value quickly and drive a focused conversion.
+  Broad marketing homepages, product-introduction pages, and campaign entry
+  points that need to orient first-time visitors, establish trust, and lead
+  them toward one primary next action.
 non_goals:
-  - Full marketing sites with deep navigation or blog structures
-  - Product detail pages with dense technical comparison content
-  - Pricing pages or authenticated application surfaces
+  - Narrow single-offer CTA pages where the user already has context
+  - Pricing or comparison-heavy pages with dense evaluation needs
+  - Authenticated application surfaces or content hubs
 ux_rationale: >
-  Landing pages need to answer the visitor's first questions in sequence:
-  what this is, why it is credible, what value it creates, and what action to
-  take next. The structure prioritizes trust and speed of comprehension.
+  Landing pages work when they answer the visitor's questions in order:
+  what this is, why it matters, why it is credible, and what to do next. The
+  pattern protects that sequence so the page does not ask for conversion
+  before it has earned confidence.
 allowed_variations:
   - Hero media choice: image, illustration, or restrained motion
   - CTA wording and destination for campaign context
   - Trust-signal format: logos, stats, testimonials, or a compact mix
-  - Feature-section emphasis based on the strongest differentiators
+  - Narrative versus product-led emphasis in the explanatory middle sections
 required_sections:
-  - Hero with headline, subheadline, and primary CTA
+  - Lightweight top navigation with one dominant CTA
+  - Hero section with headline, framing copy, and primary CTA
   - Early trust-signal section
-  - Feature or value highlight section
-  - Social proof or evidence section
-  - Repeated conversion point before footer
+  - Value explanation or differentiation section
+  - Proof or supporting evidence section
+  - Repeated conversion point after the value and proof sections
   - Footer with legal and navigation basics
 screenshots:
   desktop: screenshots/desktop-draft.svg
   mobile: screenshots/mobile-draft.svg
 figma_link: pending://add-before-preview
 changelog:
+  - version: v0.2.0
+    date: 2026-04-05
+    changes: Strengthened reuse boundaries, required structure, and review recommendation; canonical Figma source still missing
   - version: v0.1.0
     date: 2026-04-05
     changes: Initial AGE-206 draft entry installed in standalone repo

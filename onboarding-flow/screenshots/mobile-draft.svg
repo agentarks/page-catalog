@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932">
+  <rect width="430" height="932" fill="#f4f0fb"/>
+  <rect x="20" y="20" width="390" height="56" rx="18" fill="#d9cff0"/>
+  <text x="38" y="55" fill="#2d2442" font-family="Helvetica, Arial, sans-serif" font-size="18">Onboarding Flow mobile draft</text>
+  <rect x="20" y="104" width="390" height="28" rx="14" fill="#c7b7ea"/>
+  <circle cx="68" cy="118" r="11" fill="#8f73c6"/>
+  <circle cx="156" cy="118" r="11" fill="#b8a6df"/>
+  <circle cx="244" cy="118" r="11" fill="#b8a6df"/>
+  <circle cx="332" cy="118" r="11" fill="#b8a6df"/>
+  <rect x="20" y="164" width="390" height="420" rx="24" fill="#ffffff" stroke="#9d87cf" stroke-width="3"/>
+  <rect x="46" y="222" width="260" height="16" rx="8" fill="#d7ccf0"/>
+  <rect x="46" y="252" width="220" height="16" rx="8" fill="#d7ccf0"/>
+  <rect x="46" y="306" width="180" height="42" rx="18" fill="#8f73c6"/>
+  <rect x="20" y="618" width="390" height="120" rx="24" fill="#ece4fa"/>
+  <rect x="20" y="770" width="150" height="46" rx="18" fill="#d7ccf0"/>
+  <rect x="260" y="770" width="150" height="46" rx="18" fill="#8f73c6"/>
+</svg>

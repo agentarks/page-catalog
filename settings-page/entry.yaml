@@ -1,0 +1,35 @@
+id: settings-page
+name: Settings Page
+version: v0.1.0
+status: draft
+owner: Aphrodite
+approved_by: null
+approved_on: null
+intended_use: >
+  User and system configuration pages where the main job is helping a user
+  locate, understand, and safely change preferences or account controls.
+non_goals:
+  - Billing or subscription-management flows
+  - Admin-only management consoles
+  - Security-heavy credential-management pages that need separate trust review
+ux_rationale: >
+  Settings pages are about user control. The page should make discovery fast,
+  editing safe, and destructive actions clearly separated from routine changes.
+allowed_variations:
+  - Sidebar, tabbed, or single-page navigation depending on setting count
+  - Different control density for novice versus expert products
+  - Product-specific section groupings
+required_sections:
+  - Section navigation or grouping mechanism
+  - Clear section header and descriptive copy
+  - Grouped setting controls
+  - Save, cancel, or reset action area
+  - Clearly separated destructive-action zone
+screenshots:
+  desktop: screenshots/desktop-draft.svg
+  mobile: screenshots/mobile-draft.svg
+figma_link: pending://add-before-preview
+changelog:
+  - version: v0.1.0
+    date: 2026-04-05
+    changes: Initial AGE-206 draft entry installed in standalone repo

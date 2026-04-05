@@ -1,0 +1,36 @@
+id: auth-signin
+name: Auth / Sign-In Surface
+version: v0.1.0
+status: draft
+owner: Aphrodite
+approved_by: null
+approved_on: null
+intended_use: >
+  Login, signup, password reset, and adjacent authentication surfaces where the
+  user must feel trust, clarity, and low friction at the product's front door.
+non_goals:
+  - Security administration consoles or SSO configuration pages
+  - Complex fraud or account lockout management UIs
+  - Auth-adjacent account settings pages
+ux_rationale: >
+  Authentication pages are high-friction moments. The best pattern reduces
+  hesitation, keeps the form honest, and communicates trust without drowning
+  the user in decoration or security theater.
+allowed_variations:
+  - Split-screen or centered layouts
+  - Password or magic-link-first strategies
+  - Social-auth provider mix
+  - Signup-specific helper copy and strength guidance
+required_sections:
+  - Clear auth intent heading
+  - Core auth form
+  - Secondary recovery or alternate-path links
+  - Trust or policy references
+screenshots:
+  desktop: screenshots/desktop-draft.svg
+  mobile: screenshots/mobile-draft.svg
+figma_link: pending://add-before-preview
+changelog:
+  - version: v0.1.0
+    date: 2026-04-05
+    changes: Initial AGE-206 draft entry installed in standalone repo

@@ -1,0 +1,37 @@
+id: dashboard-home
+name: Dashboard Home
+version: v0.1.0
+status: draft
+owner: Aphrodite
+approved_by: null
+approved_on: null
+intended_use: >
+  Authenticated application homepages that need to orient the user quickly,
+  surface current status, and make the next actions obvious.
+non_goals:
+  - Detailed analytics or reporting views
+  - Settings-heavy configuration surfaces
+  - First-run onboarding sequences
+ux_rationale: >
+  Dashboard homes should reduce navigation overhead by showing what matters,
+  what changed recently, and what to do next without turning into a noisy
+  catch-all.
+allowed_variations:
+  - One, two, or three-column card layouts depending on density
+  - Product-specific widget mix and order
+  - Top-bar search and utility actions based on app complexity
+  - Optional promotional or help panel
+required_sections:
+  - Top navigation or command bar
+  - Status or welcome region
+  - Quick actions block
+  - Recent activity or recency-based module
+  - Progress, queue, or work-in-flight summary
+screenshots:
+  desktop: screenshots/desktop-draft.svg
+  mobile: screenshots/mobile-draft.svg
+figma_link: pending://add-before-preview
+changelog:
+  - version: v0.1.0
+    date: 2026-04-05
+    changes: Initial AGE-206 draft entry installed in standalone repo

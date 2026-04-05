@@ -1,0 +1,38 @@
+id: landing-page
+name: Landing Page
+version: v0.1.0
+status: draft
+owner: Aphrodite
+approved_by: null
+approved_on: null
+intended_use: >
+  Marketing homepages, campaign pages, and other top-of-funnel pages whose
+  primary job is to communicate value quickly and drive a focused conversion.
+non_goals:
+  - Full marketing sites with deep navigation or blog structures
+  - Product detail pages with dense technical comparison content
+  - Pricing pages or authenticated application surfaces
+ux_rationale: >
+  Landing pages need to answer the visitor's first questions in sequence:
+  what this is, why it is credible, what value it creates, and what action to
+  take next. The structure prioritizes trust and speed of comprehension.
+allowed_variations:
+  - Hero media choice: image, illustration, or restrained motion
+  - CTA wording and destination for campaign context
+  - Trust-signal format: logos, stats, testimonials, or a compact mix
+  - Feature-section emphasis based on the strongest differentiators
+required_sections:
+  - Hero with headline, subheadline, and primary CTA
+  - Early trust-signal section
+  - Feature or value highlight section
+  - Social proof or evidence section
+  - Repeated conversion point before footer
+  - Footer with legal and navigation basics
+screenshots:
+  desktop: screenshots/desktop-draft.svg
+  mobile: screenshots/mobile-draft.svg
+figma_link: pending://add-before-preview
+changelog:
+  - version: v0.1.0
+    date: 2026-04-05
+    changes: Initial AGE-206 draft entry installed in standalone repo

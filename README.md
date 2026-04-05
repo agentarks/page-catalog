@@ -132,9 +132,9 @@ That command runs:
 
 The validator checks every catalog entry for:
 
-- required repo files: `entry.yaml`, `entry.md`, `figma/README.md`, and draft screenshots
+- required repo files: `entry.yaml`, `entry.md`, `figma/README.md`, and the screenshot assets declared in `entry.yaml`
 - required metadata fields in `entry.yaml`
-- expected screenshot paths and basic metadata shape
+- basic metadata shape plus valid `screenshots.desktop` / `screenshots.mobile` paths that stay inside the entry directory
 
 ## Lifecycle
 

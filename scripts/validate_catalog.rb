@@ -8,9 +8,7 @@ class CatalogValidator
   ENTRY_FILES = [
     "entry.yaml",
     "entry.md",
-    "figma/README.md",
-    "screenshots/desktop-draft.svg",
-    "screenshots/mobile-draft.svg"
+    "figma/README.md"
   ].freeze
 
   REQUIRED_FIELDS = %w[
@@ -90,9 +88,7 @@ class CatalogValidator
     validate_value(entry_dir, data, "allowed_variations") { |value| value.is_a?(Array) && !value.empty? }
     validate_value(entry_dir, data, "required_sections") { |value| value.is_a?(Array) && !value.empty? }
     validate_value(entry_dir, data, "changelog") { |value| value.is_a?(Array) && !value.empty? }
-    validate_value(entry_dir, data, "screenshots") do |value|
-      value.is_a?(Hash) && value["desktop"] == "screenshots/desktop-draft.svg" && value["mobile"] == "screenshots/mobile-draft.svg"
-    end
+    validate_screenshots(entry_dir, data["screenshots"])
   rescue Psych::Exception => e
     @errors << "#{entry_dir.basename}: invalid YAML (#{e.message})"
   end
@@ -102,6 +98,29 @@ class CatalogValidator
     return if yield(data[field])
 
     @errors << "#{entry_dir.basename}: invalid #{field}"
+  end
+
+  def validate_screenshots(entry_dir, value)
+    unless value.is_a?(Hash)
+      @errors << "#{entry_dir.basename}: invalid screenshots"
+      return
+    end
+
+    %w[desktop mobile].each do |viewport|
+      relative_path = value[viewport]
+      unless relative_path.is_a?(String) && !relative_path.empty?
+        @errors << "#{entry_dir.basename}: invalid screenshots.#{viewport}"
+        next
+      end
+
+      screenshot_path = entry_dir.join(relative_path).cleanpath
+      unless screenshot_path.to_s.start_with?(entry_dir.to_s + File::SEPARATOR) || screenshot_path == entry_dir
+        @errors << "#{entry_dir.basename}: screenshots.#{viewport} must stay within the entry directory"
+        next
+      end
+
+      @errors << "#{entry_dir.basename}: missing #{relative_path}" unless screenshot_path.file?
+    end
   end
 end
 

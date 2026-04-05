@@ -5,6 +5,8 @@ require "pathname"
 require "yaml"
 
 class CatalogValidator
+  SCREENSHOT_EXTENSIONS = %w[.png .jpg .jpeg .webp .svg .avif].freeze
+
   ENTRY_FILES = [
     "entry.yaml",
     "entry.md",
@@ -106,6 +108,8 @@ class CatalogValidator
       return
     end
 
+    screenshots_root = entry_dir.join("screenshots")
+
     %w[desktop mobile].each do |viewport|
       relative_path = value[viewport]
       unless relative_path.is_a?(String) && !relative_path.empty?
@@ -116,6 +120,16 @@ class CatalogValidator
       screenshot_path = entry_dir.join(relative_path).cleanpath
       unless screenshot_path.to_s.start_with?(entry_dir.to_s + File::SEPARATOR) || screenshot_path == entry_dir
         @errors << "#{entry_dir.basename}: screenshots.#{viewport} must stay within the entry directory"
+        next
+      end
+
+      unless screenshot_path.to_s.start_with?(screenshots_root.to_s + File::SEPARATOR)
+        @errors << "#{entry_dir.basename}: screenshots.#{viewport} must resolve under screenshots/"
+        next
+      end
+
+      unless SCREENSHOT_EXTENSIONS.include?(screenshot_path.extname.downcase)
+        @errors << "#{entry_dir.basename}: screenshots.#{viewport} must use an image file extension"
         next
       end
 

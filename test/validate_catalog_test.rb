@@ -78,6 +78,24 @@ class ValidateCatalogTest < Minitest::Test
     end
   end
 
+  def test_validator_rejects_non_visual_files_as_screenshot_proof
+    Dir.mktmpdir("page-catalog-invalid-screenshot") do |dir|
+      create_entry(
+        dir,
+        "landing-page",
+        screenshot_paths: {
+          "desktop" => "entry.md",
+          "mobile" => "screenshots/mobile.png"
+        }
+      )
+
+      stdout, stderr, status = Open3.capture3("ruby", SCRIPT_PATH, dir)
+
+      refute status.success?, "validator unexpectedly passed\n#{stdout}\n#{stderr}"
+      assert_includes stdout + stderr, "screenshots.desktop"
+    end
+  end
+
   private
 
   def create_entry(

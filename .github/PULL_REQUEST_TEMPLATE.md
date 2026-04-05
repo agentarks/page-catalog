@@ -40,6 +40,7 @@
 | Aphrodite |  |  | yes/no |  |  |
 | Calliope |  |  | yes/no |  |  |
 | Phoebe |  |  | yes/no |  |  |
+| Athena |  |  | yes/no |  |  |
 | Hephaestus |  |  | yes/no |  |  |
 
 # Required Reviewers

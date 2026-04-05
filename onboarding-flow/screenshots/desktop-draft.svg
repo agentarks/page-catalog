@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <rect width="1440" height="900" fill="#f4f0fb"/>
+  <rect x="60" y="36" width="1320" height="72" rx="22" fill="#d9cff0"/>
+  <text x="92" y="81" fill="#2d2442" font-family="Helvetica, Arial, sans-serif" font-size="28">Onboarding Flow desktop draft placeholder</text>
+  <rect x="140" y="170" width="1160" height="36" rx="18" fill="#c7b7ea"/>
+  <circle cx="190" cy="188" r="16" fill="#8f73c6"/>
+  <circle cx="400" cy="188" r="16" fill="#b8a6df"/>
+  <circle cx="610" cy="188" r="16" fill="#b8a6df"/>
+  <circle cx="820" cy="188" r="16" fill="#b8a6df"/>
+  <circle cx="1030" cy="188" r="16" fill="#b8a6df"/>
+  <rect x="140" y="250" width="700" height="420" rx="28" fill="#ffffff" stroke="#9d87cf" stroke-width="3"/>
+  <text x="186" y="330" fill="#2d2442" font-family="Helvetica, Arial, sans-serif" font-size="36">Current onboarding step</text>
+  <rect x="186" y="372" width="420" height="18" rx="9" fill="#d7ccf0"/>
+  <rect x="186" y="406" width="360" height="18" rx="9" fill="#d7ccf0"/>
+  <rect x="186" y="462" width="280" height="48" rx="20" fill="#8f73c6"/>
+  <rect x="890" y="250" width="410" height="420" rx="28" fill="#ece4fa"/>
+  <text x="934" y="332" fill="#2d2442" font-family="Helvetica, Arial, sans-serif" font-size="28">Support / rationale</text>
+  <rect x="140" y="716" width="180" height="52" rx="18" fill="#d7ccf0"/>
+  <rect x="1120" y="716" width="180" height="52" rx="18" fill="#8f73c6"/>
+</svg>

@@ -124,6 +124,7 @@ Draft → Ready for Review → Preview → Approved → Published → Superseded
 
 ```
 Draft
+  → Ready for Review
   → [Hephaestus tech review + Calliope copy review if relevant]
   → Preview
   → [Board approval]
@@ -203,19 +204,20 @@ If the same deviation appears across multiple projects, Apollo files it as a cat
 2. Fill in `entry.yaml` and `entry.md` at Draft quality
 3. Add screenshots at Draft quality (can be wireframes)
 4. Open a PR with status: `Draft`
-5. When ready for review, move to Preview and notify the board
-6. After board approval, Aphrodite merges and tags a release
+5. Move the entry to Ready for Review and request Hephaestus review plus Calliope review when messaging matters
+6. Advance the review-complete entry to Preview and notify the board
+7. After board approval, Aphrodite merges and tags a release
 
 ---
 
 ## Current Entries
 
-_None yet — this library is being bootstrapped as part of AGE-206._
-
-Planned v1 set:
+Draft library entries installed in this repo:
 - landing-page
 - auth-signin
 - settings-page
 - onboarding-flow
 - dashboard-home
 - marketing-cta
+
+These entries are still `draft` until they clear Ready for Review, Preview, board approval, and a tagged release.

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932">
+  <rect width="430" height="932" fill="#f6f1e7"/>
+  <rect x="24" y="24" width="382" height="58" rx="18" fill="#e0d5c1"/>
+  <text x="42" y="60" fill="#2f2a24" font-family="Helvetica, Arial, sans-serif" font-size="18">Landing Page mobile draft</text>
+  <rect x="24" y="112" width="382" height="220" rx="24" fill="#fffaf1" stroke="#b38b59" stroke-width="3"/>
+  <text x="46" y="168" fill="#2f2a24" font-family="Helvetica, Arial, sans-serif" font-size="28">Hero</text>
+  <rect x="46" y="196" width="260" height="16" rx="8" fill="#d1c0a0"/>
+  <rect x="46" y="226" width="220" height="16" rx="8" fill="#d1c0a0"/>
+  <rect x="46" y="266" width="150" height="40" rx="20" fill="#b38b59"/>
+  <rect x="24" y="362" width="382" height="84" rx="22" fill="#e8dcc9"/>
+  <text x="46" y="413" fill="#2f2a24" font-family="Helvetica, Arial, sans-serif" font-size="22">Trust signals</text>
+  <rect x="24" y="476" width="382" height="128" rx="22" fill="#fffaf1" stroke="#c9b18b" stroke-width="3"/>
+  <rect x="24" y="630" width="382" height="128" rx="22" fill="#fffaf1" stroke="#c9b18b" stroke-width="3"/>
+  <rect x="24" y="784" width="382" height="100" rx="22" fill="#d8c7ae"/>
+  <text x="46" y="844" fill="#2f2a24" font-family="Helvetica, Arial, sans-serif" font-size="22">CTA + footer</text>
+</svg>
